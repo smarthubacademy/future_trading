@@ -1,0 +1,437 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.com_cu .col-md-2 {    
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.item-card {
+    background-color: rgb(247, 246, 245) !important;
+}
+.com_cu .col-md-1 {
+    padding-left: 5px!important;
+    padding-right: 5px!important;
+}
+.com_cu .col-md-3 {
+    padding-left: 5px!important;
+    padding-right: 5px!important;
+}.ex_card {    padding-top: 10px;    padding-bottom: 10px;}
+
+.cardImage {
+    width: 100% !important;
+    max-height: 180px;
+    object-fit: contain;
+
+}
+
+
+
+nav .navbar-brand img {
+    color: black !important;
+    width: 140px;
+}
+
+nav .navbar-nav li a {
+    color: black !important;
+    font-size: 18px;
+    margin-right: 8px;
+
+}
+.padding_lr{
+	padding-left:40px!important;
+	padding-right:40px!important;
+}
+.company_logo img {
+    width: 50px !important;
+    height: 50px;
+
+
+}
+
+/* Advanched Search bar icon */
+.search-icon {
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #536bf6;
+    font-size: 8px;
+    position: relative;
+    border-radius: 5px;
+    
+}
+.first-search{
+    margin-left: 72px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    line-height: 2;
+}
+
+ul li a:hover {
+    text-decoration: none;
+    color: blue
+}
+
+.col-md-10 h5 {
+    color: #536bf6;
+}
+
+/*Search cse start*/
+#conts {
+    width: 100%;
+    float: none;
+}
+
+#conts {
+    position: relative;
+}
+
+#conts .comSearch {
+    margin-bottom: 5px;
+}
+
+.colorSection {
+    margin-bottom: 20px;
+    padding: 10px 20px 6px;
+    position: relative;
+    border: 1px solid #d3d3d3;
+    background-color: #fafad2;
+    box-shadow: 1px 1px 5px #dfdede, 1px 1px 3px #dfdede;
+}
+
+#container {
+    background-color: #fff;
+    text-align: left;
+}
+
+#conts table.searchItemTable {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+body,
+input,
+option,
+select,
+table,
+textarea {
+    line-height: 1.1;
+}
+
+#conts table.searchItemTable td {
+    padding: 5px 0 0 0 !important;
+}
+
+#conts table.searchItemTable td .sel {
+    width: 100% !important;
+    background-color: #fff;
+}
+
+.sel {
+    display: inline-flex;
+}
+
+#conts table.searchItemTable td .sel select {
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+#conts .selectWidthM:not(.selectedCondition) {
+    width: 140px;
+    border-radius: 4px;
+    background-color: #fff;
+    height: 30px;
+}
+
+.sel.default select {
+    appearance: auto !important;
+}
+
+.form-control.input-sm {
+    padding: 0px 12px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+}
+
+.form-control {
+    width: inherit;
+    font-size: 13px;
+    line-height: 20px;
+    background-image: none;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    -ms-transition: all .15s ease-in-out;
+    -o-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    background: var(--white);
+    color: var(--black);
+}
+
+#conts table .narrowTD {
+    width: 10px;
+}
+
+#conts table td.borderBelow {
+    padding: 8px 0 1px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#conts table td.borderAboveFirst {
+    padding: 1px 0 8px 0;
+    display: flex !important;
+    justify-content: space-between;
+}
+
+#conts table.searchItemTable td .sel select {
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+#conts .selectWidthM:not(.selectedCondition) {
+    width: 140px;
+    border-radius: 4px;
+    background-color: #fff;
+    height: 30px;
+}
+
+.sel.default select {
+    appearance: auto !important;
+}
+
+.comSearch .accessories {
+    margin: 5px 0 0;
+    clear: both;
+    font-size: 1.2em;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#conts .accessories table td {
+    padding: 5px 5px 5px 1px;
+}
+
+#conts .accessories table tr td label {
+    display: inline;
+    align-items: center;
+    font-weight: 100;
+    font-size: .7em;
+}
+
+#conts .accessories table tr td label span {
+    margin-left: 10px;
+}
+
+#conts .searchButtonResetLink {
+    margin-left: 100px;
+}
+
+#conts .searchButtonReset {
+    width: 130px;
+    cursor: pointer;
+    background: #fff;
+    background: -moz-linear-gradient(top, #fff 0, #ededed 100%);
+    background: -webkit-linear-gradient(top, #fff 0, #ededed 100%);
+    background: linear-gradient(to bottom, #fff 0, #ededed 100%);
+    border: 1px solid #a8a8a8;
+    line-height: 28px;
+    color: #333;
+    border-radius: 4px;
+}
+
+#conts .searchButton:hover {
+    background: #188ada;
+}
+
+#conts .searchButton {
+    width: 250px;
+    cursor: pointer;
+    line-height: 28px;
+    border: 0 transparent;
+    color: #fff;
+    background: #0e6ac8;
+    background: linear-gradient(to bottom, #2897e5 0, #0e6ac8 100%);
+    border-radius: 4px;
+}
+
+#conts .priceSec {
+    background-color: #d3d3d3;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+#conts .priceSec h2 {
+    font-size: 1.2em;
+}
+
+#conts .priceSec h2,
+#conts .priceSec h3 {
+    margin: 0 0 10px;
+    color: #0d38ef;
+    width: 100%;
+}
+
+#conts .priceSec .txtInner .pBox {
+    width: 315px;
+    float: left;
+    padding-right: 10px;
+}
+
+#conts .priceSec .txtInner .pBox p {
+    color: #050505;
+    font-size: 11px;
+}
+
+#conts .priceSec .txtInner dl {
+    width: 300px;
+    color: #0a0a0a;
+    font-size: 1em;
+    float: left;
+}
+
+#conts .priceSec .txtInner dl dt {
+    float: left;
+    font-size: 11px;
+    width: 106px;
+    padding: 5px 0;
+    font-weight: 300;
+}
+
+#conts .priceSec .txtInner dl dd {
+    padding: 2px 0 3px 2px;
+}
+
+#conts .priceSec .txtInner dl dd ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+}
+
+#conts .priceSec .txtInner dl dd ul li {
+    margin-right: 10px;
+}
+
+#conts .priceSec .txtInner .selectList select {
+    width: 129px;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: #fff;
+    height: 25px;
+    padding: 0 !important;
+}
+
+#conts .priceSec .txtInner dl {
+    width: 300px;
+    color: #0a0a0a;
+    font-size: 1em;
+    float: left;
+}
+
+#main dl dd {
+    font-size: 1em;
+}
+
+#conts .priceSec .txtInner dl dd {
+    padding: 2px 0 3px 2px;
+}
+
+#conts .priceSec .totalPriceCalcButton:hover {
+    background: #188ada;
+}
+
+#conts .priceSec .totalPriceCalcButton {
+    float: right;
+    width: 100px;
+    cursor: pointer;
+    line-height: 20px;
+    border: 0 transparent;
+    color: #fff;
+    background: #0e6ac8;
+    background: -moz-linear-gradient(top, #2897e5 0, #0e6ac8 100%);
+    background: -webkit-linear-gradient(top, #2897e5 0, #0e6ac8 100%);
+    background: linear-gradient(to bottom, #2897e5 0, #0e6ac8 100%);
+    border-radius: 4px;
+}
+
+/*Search cse end*/
+
+
+/* Stock page */
+
+.namelink a {
+   text-decoration: none;
+   color: black;
+}
+.searchbymake ul {
+    list-style-type: none;
+}
+
+.searchbymake ul li a {
+    text-decoration: none;
+    color: black;
+    line-height: 2;
+}
+
+.searchbymake ul li a:hover {
+    text-decoration: none;
+    color: blue
+}
+.search_u i.fa-solid.fa-magnifying-glass {
+    font-size: 12px;
+    font-weight: 600;
+}
+form#quick_seaach {
+    margin-top: 20px;
+}
+.col_m2 button{
+	width:100%;
+}
+.stock_m {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+	margin-bottom:50px;
+}
+.btu_infor{
+	color: #000;
+    background-color: #0dcaf005!important;
+    border-color: #0dcaf0;
+}
+@media screen and (min-width: 767px) {
+	.col_m {
+		width: 14%!important;
+		padding: 5px!important;
+	}
+	.col_m2{
+		width: 14%!important;
+		padding: 5px 25px 5px 5px!important;
+	}
+}
