@@ -45,6 +45,8 @@ Route::post('/register-admin', [AdminAuthController::class, 'registerUser'])->na
 Route::get('/dashboard-admin', [AdminAuthController::class, 'dashboard'])->middleware('isLoggedIn');
 Route::get('/logout', [AdminAuthController::class, 'logout'])->name('logout');
 
+Route::get('/a2list', [VehicleDataTransferController::class, 'a2list'])->middleware('isLoggedIn');
+
 
 
 // Route::controller(VehicleController::class)->group(function () {
