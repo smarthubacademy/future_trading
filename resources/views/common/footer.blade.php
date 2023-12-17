@@ -1,6 +1,6 @@
 </div></div><footer class="text-center text-white" style="background-color:black">
     <div class="container p-4 pb-2">
-       <section class="mb-5">
+       <section>
           <a class="btn text-white btn-floating m-2" href="{{ route('home')}}" role="button">
              Home
           </a>

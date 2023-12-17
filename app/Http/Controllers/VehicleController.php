@@ -74,7 +74,7 @@ class VehicleController extends Controller
         return view ('vehicle.stock', compact('action', 'keys', 'quickSearchs', 'stock_list'));
     }
     // Searching from stock page
-    public function search_stock(Request $request)
+    public function stock_search(Request $request)
     {
         $keys = $request->all();
         $stock_list = Vehicle::stockSearch($keys);

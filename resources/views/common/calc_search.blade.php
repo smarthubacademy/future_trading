@@ -65,6 +65,10 @@
                   @endforeach
                </select>
             </div>
+         </div>
+         <div class="row justify-content-between btm-mg">
+            
+            
             <div class="col-md-2 show">
                <select id="country" name="country" class="form-select" aria-label="Default select example">
                   <option value="">COUNTRY</option>
@@ -74,12 +78,17 @@
                </select>
                @if(!empty($message)) <p>{{$message}}</p> @endif
             </div>
-           
-            <div class="col-md-2 d-flex align-items-center mt-4">
+            <div class="col-md-7"></div>
+            <div class="col-md-2 d-flex align-items-center">
                <button type="submit" class="btn btn-primary">
                   <i class="fa-solid fa-magnifying-glass"></i>
                   {{$action}}
                </button>
+            </div>
+            <div class="col-md-1 d-flex align-items-center">
+                  @foreach($quickSearchs['makers'] as $maker)
+                     <a href="/calculate?maker={{$maker->Maker}}" class="btn btn-info" role="button">{{$maker->Maker}}</a>
+                  @endforeach
             </div>
        </div>
      </form>

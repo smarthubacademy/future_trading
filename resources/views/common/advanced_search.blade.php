@@ -70,7 +70,8 @@
                   @endforeach
                </select>
             </div>
-           
+         </div>
+         <div class="row justify-content-between btm-mg">
             <div class="col-md-2">
                <select id="LeftHand" name="LeftHand" class="form-select" aria-label="Default select example">
                   <option value="">STEERING</option>
@@ -117,6 +118,8 @@
                  @endforeach
                </select>
             </div>
+         </div>
+         <div class="row justify-content-between btm-mg">   
             <div class="col-md-2">
                <select id="color" name="color" class="form-select" aria-label="Default select example">
                    <option value="">COLOR</option>
@@ -126,26 +129,27 @@
                </select>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-10 check-box">
                OPTIONS:
-               <input type="checkbox" name="ab" id="ab" value="1">Air Bag
-               <input type="checkbox" name="ac" id="ac" value="1">Air Conditioner
-               <input type="checkbox" name="aw" id="aw" value="1">Alloy Wheels
-               <input type="checkbox" name="navi" id="navigation" value="1">Navigation
-               <input type="checkbox" name="tv" id="tv" value="1">TV
-               <input type="checkbox" name="dvd" id="dvd" value="1">DVD
+               <input type="checkbox" name="ab" id="ab" value="1"> Air Bag
+               <input type="checkbox" name="ac" id="ac" value="1"> Air Conditioner
+               <input type="checkbox" name="aw" id="aw" value="1"> Alloy Wheels
+               <input type="checkbox" name="navi" id="navigation" value="1"> Navigation
+               <input type="checkbox" name="tv" id="tv" value="1"> TV
+               <input type="checkbox" name="dvd" id="dvd" value="1"> DVD
                
-               <input type="checkbox" name="ps" id="ps" value="1">Power Steering
-               <input type="checkbox" name="pw" id="pw" value="1">Power Windows
-               <input type="checkbox" name="hr" id="hr" value="1">Hight Roof
-               <input type="checkbox" name="rs" id="rs" value="1">Rear Spoiler
+               <input type="checkbox" name="ps" id="ps" value="1"> Power Steering
+               <input type="checkbox" name="pw" id="pw" value="1"> Power Windows
+               <input type="checkbox" name="hr" id="hr" value="1"> Hight Roof
+               <input type="checkbox" name="rs" id="rs" value="1"> Rear Spoiler
                <input type="checkbox" name="sr" id="sr" value="1"> Sun Roof
                <input type="checkbox" name="leather_seat" id="leather_seat" value="1"> Leather Seat
-               <input type="checkbox" name="grillguard" id="grillguard" value="1">Grill Guard
-               <input type="checkbox" name="hdeck" id="hdeck" value="1">High Deck
+               <input type="checkbox" name="grillguard" id="grillguard" value="1"> Grill Guard
+               <input type="checkbox" name="hdeck" id="hdeck" value="1"> High Deck
             </div>
-            
-            <div class="col-md-2 d-flex align-items-center mt-4">
+         </div> 
+         <div class="row justify-content-between">  
+            <div class="col-md-12 text-end">
                <button type="submit" class="btn btn-primary">
                   <i class="fa-solid fa-magnifying-glass"></i>
                   {{$action}}

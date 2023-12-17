@@ -2,11 +2,10 @@
 @section('content')
 
 <div class="container mt-5">
-   @foreach($quickSearchs['makers'] as $maker)
-      <a href="/calculate?maker={{$maker->Maker}}" class="btn btn-info" role="button">{{$maker->Maker}}</a>
-   @endforeach
-
    @include('common.calc_search')
+  <div class="row">
+    <div class="col-md-12">
+    <div class="table-responsive">
    <table class="table table-striped">
    <thead>
     <tr>
@@ -40,6 +39,9 @@
     @endforeach
 </tbody>
 </table>
+</div>
+</div>
+</div>
   
   <!-- banner -->
   @include('common.banner')

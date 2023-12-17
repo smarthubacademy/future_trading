@@ -425,6 +425,12 @@ form#quick_seaach {
     background-color: #0dcaf005!important;
     border-color: #0dcaf0;
 }
+.btm-mg {
+    margin-top: 20px!important;
+}
+.check-box input{
+    margin-left: 5px;
+}
 @media screen and (min-width: 767px) {
 	.col_m {
 		width: 14%!important;
