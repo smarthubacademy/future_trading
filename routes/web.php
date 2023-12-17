@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehicleController;
+use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\VehicleDataTransferController; 
 
 /*
@@ -19,25 +20,56 @@ Route::get('/admin', function () {
     return view('welcome');
 })->name('admin');
 
-Route::controller(VehicleController::class)->group(function () {
-    Route::get('/', 'index')->name('home');
-    Route::post('/quick_search', 'quick_search')->name('qsearch');
-    Route::get('/stock', 'stock')->name('stock');
-    Route::post('/stock_search', 'search_stock')->name('search_stock');
-    Route::get('/search', 'search')->name('search');
-    Route::post('/advanced_search', 'advanced_search')->name('adv_search');
-    Route::get('/calculate', 'priceCalculate')->name('price_calculate');
-    Route::post('/calculate', 'calculate')->name('calculate');
+Route::get('/', [VehicleController::class, 'index'])->name('home');
+Route::get('/stock', [VehicleController::class, 'stock'])->name('stock');
+Route::get('/search', [VehicleController::class, 'search'])->name('search');
+Route::post('/quick_search', [VehicleController::class, 'quick_search'])->name('quick_search');
+Route::post('/stock_search', [VehicleController::class, 'stock_search'])->name('stock_search');
+Route::post('/advanced_search', [VehicleController::class, 'advanced_search'])->name('adv_search');
 
-    Route::get('/howto_buy', 'howto')->name('howto');
-    Route::get('/contact', 'contact')->name('contact');
-    Route::get('/review', 'customer_review')->name('review');
-    Route::get('/profile', 'profile')->name('profile');
-});
+Route::get('/calculate', [VehicleController::class, 'priceCalculate'])->name('price_calculate');
+Route::post('/calculate', [VehicleController::class, 'calculate'])->name('calculate');
+
+Route::get('/profile', [VehicleController::class, 'profile'])->name('profile');
+Route::get('/howto_buy', [VehicleController::class, 'howto'])->name('howto');
+Route::get('/contact', [VehicleController::class, 'contact'])->name('contact');
+Route::get('/review', [VehicleController::class, 'review'])->name('review');
+
+
+//admin section
+Route::get('/login', [AdminAuthController::class, 'login'])->name('login')->middleware('alreadyLoggedIn');
+Route::post('/login-admin', [AdminAuthController::class, 'loginAdmin'])->name('login-admin');
+
+Route::get('/register', [AdminAuthController::class, 'register'])->name('register');
+Route::post('/register-admin', [AdminAuthController::class, 'registerUser'])->name('register-admin');
+Route::get('/dashboard-admin', [AdminAuthController::class, 'dashboard'])->middleware('isLoggedIn');
+Route::get('/logout', [AdminAuthController::class, 'logout'])->name('logout');
+
+
+
+// Route::controller(VehicleController::class)->group(function () {
+//     Route::get('/', 'index')->name('home');
+//     Route::post('/quick_search', 'quick_search')->name('qsearch');
+//     Route::get('/stock', 'stock')->name('stock');
+//     Route::post('/stock_search', 'search_stock')->name('search_stock');
+//     Route::get('/search', 'search')->name('search');
+//     Route::post('/advanced_search', 'advanced_search')->name('adv_search');
+//     Route::get('/calculate', 'priceCalculate')->name('price_calculate');
+//     Route::post('/calculate', 'calculate')->name('calculate');
+
+//     Route::get('/howto_buy', 'howto')->name('howto');
+//     Route::get('/contact', 'contact')->name('contact');
+//     Route::get('/review', 'customer_review')->name('review');
+//     Route::get('/profile', 'profile')->name('profile');
+// });
 
 
 Route::get('/dashboard', function () {
     return view('dashboard');})->middleware(['auth'])->name('dashboard');
+
+
+
+
 
 // require __DIR__.'/auth.php';
 
