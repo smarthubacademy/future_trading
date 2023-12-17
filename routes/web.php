@@ -16,9 +16,6 @@ use App\Http\Controllers\VehicleDataTransferController;
 |
 */
 
-Route::get('/admin', function () {
-    return view('welcome');
-})->name('admin');
 
 Route::get('/', [VehicleController::class, 'index'])->name('home');
 Route::get('/stock', [VehicleController::class, 'stock'])->name('stock');
@@ -37,6 +34,10 @@ Route::get('/review', [VehicleController::class, 'review'])->name('review');
 
 
 //admin section
+
+Route::get('/admin', function () {
+    return view('welcome');
+})->name('admin');
 Route::get('/login', [AdminAuthController::class, 'login'])->name('login')->middleware('alreadyLoggedIn');
 Route::post('/login-admin', [AdminAuthController::class, 'loginAdmin'])->name('login-admin');
 
@@ -45,7 +46,7 @@ Route::post('/register-admin', [AdminAuthController::class, 'registerUser'])->na
 Route::get('/dashboard-admin', [AdminAuthController::class, 'dashboard'])->middleware('isLoggedIn');
 Route::get('/logout', [AdminAuthController::class, 'logout'])->name('logout');
 
-Route::get('/a2list', [VehicleDataTransferController::class, 'a2list'])->middleware('isLoggedIn');
+Route::get('/admin_stock', [VehicleDataTransferController::class, 'admin_stock'])->middleware('isLoggedIn');
 
 
 

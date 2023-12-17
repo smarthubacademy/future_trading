@@ -18,14 +18,14 @@ class VehicleDataTransfer extends Model
     public $guarded=[];
 
     // protected $connection = 'mysql2';
-    public function a2list()
+    public function admin_stock()
     {
         $this->connectAutoDb();
-        $vehicles = DB::table('a2_vehicle')
-        ->where('NkWebsiteDisplay', 0)
-        ->whereNotNull('ChassisNo')
-        ->orderBy('Id')
-        ->get();
+        $vehicles = DB::table('a2_vehicle')->get();
+        // ->where('NkWebsiteDisplay', 0)
+        // ->whereNotNull('ChassisNo')
+        // ->orderBy('Id')
+        // ->get();
         $this->connectFutureDb();
         return $vehicles;
 
