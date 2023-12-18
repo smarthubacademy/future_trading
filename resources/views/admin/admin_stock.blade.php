@@ -143,6 +143,7 @@
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
+
         <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -151,7 +152,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav flex-column">
+                        <ul class="navbar-nav flex-column">
                             <li class="nav-divider">
                                 Menu
                             </li>
@@ -199,19 +200,115 @@
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="/dashboard-admin" class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Admin Stock</li>
                                         </ol>
                                     </nav>
                                 </div>
                             </div>
                         </div>
                     </div>
-                   
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                           
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                        <button style="margin-bottom: 20px;margin-right: 20px;float: right;" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add Stock</button>
+                        </div>
+                    </div>
+            <div class="row">        
+            <!-- ============================================================== -->
+                            <!-- recent orders  -->
+            <!-- ============================================================== -->
+            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+                <div class="card">
+                    <h5 class="card-header">All Stock</h5>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="bg-light">
+                                    <tr class="border-0">
+                                        <th class="border-0"></th>
+                                        <th class="border-0">Id</th>
+                                        <th class="border-0">Image</th>
+                                        <th class="border-0">ChassisNo</th>
+                                        <th class="border-0">Vehicle Name</th>
+                                        <th class="border-0">Maker</th>
+                                        <th class="border-0">Year Model</th>
+                                        <th class="border-0">Options</th>
+                                        <th class="border-0" style="text-align: center;">Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($vehicles as $vehicle)
+                                    <tr>
+                                        <td><input class="stockadmin" type="checkbox" value="" id="stock"></td>
+                                        <td>{{$vehicle->Id}}</td>
+                                        <td>
+                                            <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
+                                        </td>
+                                        <td>{{$vehicle->ChassisNo}}</td>
+                                        <td>{{$vehicle->VehicleName}} </td>
+                                        <td>{{$vehicle->Maker}}</td>
+                                        <td>{{$vehicle->YearModel}}</td>
+                                        <td>{{$vehicle->Grade}}, {{$vehicle->Color}}</td>
+                                        <td style="text-align: center;"><a href="#" class="breadcrumb-link"><i class="fas fa-trash-alt"></i></a></td>
+                                    </tr>
+                                    @endforeach
+                                    
+                            
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Stock</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <form class="addstockf" style="padding:15px;" action="" Method="POST">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Vehicle Name</label><br>
+                                <input type="text" class="form-control" name="vehiclename" id="vehiclename" placeholder="Vehicle Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="ChassisNo">Chassis No</label><br>
+                                <input type="text" class="form-control" id="chassisno" name="chassisno" placeholder="Chassis No">
+                            </div>
+                            <div class="form-group">
+                                <label for="ChassisNo">Maker</label><br>
+                                <input type="text" class="form-control" id="maker" name="maker" placeholder="Maker">
+                            </div>
+                            <div class="form-group">
+                                <label for="ChassisNo">Year Model</label><br>
+                                <input type="text" class="form-control" id="ymodel" name="ymodel" placeholder="Year Model">
+                            </div>
+                            <div class="form-group">
+                                <label for="ChassisNo">Options</label><br>
+                                <input type="text" class="form-control" id="options" name="options" placeholder="Options">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                       <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                        <button type="button" class="btn btn-primary">Send</button>
+                    </div>
+                    </div>
                 </div>
             </div>
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-           <!-- <div style="position: absolute;bottom: 0;" class="footer">
+            <!--<div  class="footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">

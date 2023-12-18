@@ -17,11 +17,12 @@ class VehicleDataTransferController extends Controller
         $a2model = new VehicleDataTransfer();
         $vehicles = $a2model->admin_stock();
         
-        return view('admin.dashboard', compact('vehicles'));  
+        return view('admin.admin_stock', compact('vehicles'));  
     }
     public function transferDataFromVehicleAoto(Request $request)
     {
         $mm = new VehicleDataTransfer();
+        
        $inserted = $mm->transferData();
        return view('admin.dashboard', compact('inserted'));
     }

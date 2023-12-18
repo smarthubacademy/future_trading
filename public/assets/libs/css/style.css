@@ -6716,7 +6716,21 @@ form.dropzone {
     display: flex;
     align-items: center;
 }
-
+#vehiclename {
+    width: 100%;
+}
+#options {
+    width: 100%;
+}
+#ymodel{
+    width: 100%;
+}
+#maker {
+    width: 100%;
+}
+#chassisno {
+    width: 100%;
+}
 
 /* ==========================================================================
 9. Map

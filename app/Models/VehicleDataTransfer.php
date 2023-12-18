@@ -30,13 +30,14 @@ class VehicleDataTransfer extends Model
         return $vehicles;
 
     }
-    public function transferData()
+    public function transferData($ids)
     {        
        $this->connectAutoDb();
         // "select * from a2_vehicle where NkWebsiteDisplay = 0 and PictureStorage = true and ChassisNo is not null order by Id"; 
         $vehicles = DB::table('a2_vehicle')
             ->where('NkWebsiteDisplay', 0)
             ->whereNotNull('ChassisNo')
+            ->whereIn('Id', $ids)
             ->orderBy('Id')
             ->get();
             // foreach($vehicles as $data) {
