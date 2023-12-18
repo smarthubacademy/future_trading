@@ -12,11 +12,19 @@ use Session;
 class VehicleDataTransferController extends Controller
 {
 
-    public function TransferDataFromVehicleAoto(Request $request)
+    public function admin_stock()
+    {
+        $a2model = new VehicleDataTransfer();
+        $vehicles = $a2model->admin_stock();
+        
+        return view('admin.admin_stock', compact('vehicles'));  
+    }
+    public function transferDataFromVehicleAoto(Request $request)
     {
         $mm = new VehicleDataTransfer();
+        
        $inserted = $mm->transferData();
-       return view('dashboard', compact('inserted'));
+       return view('admin.dashboard', compact('inserted'));
     }
 
 }
