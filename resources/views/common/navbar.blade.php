@@ -9,26 +9,31 @@
 				 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 					 <ul class="navbar-nav  mb-2 mb-lg-0">
 						 <!--<li class="nav-item"><a class="nav-link" aria-current="page" href="{{ route('home')}}">Home</a></li>-->
-						  <li class="nav-item dropdown">
+						 <!-- <li>
 							  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 								Vehicle
-							  </a>
-							  <ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="{{ route('stock')}}">Stock</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="{{ route('search')}}">Search action</a></li>
-								<li><hr class="dropdown-divider"></li>
+							  </a></li>-->
+							  
+								<li><a class="nav-link" aria-current="page" href="{{ route('stock')}}">Stock</a></li>
+							
+								<li><a class="nav-link" aria-current="page" href="{{ route('search')}}">Search</a></li>
+								<li><a class="nav-link" aria-current="page" href="{{ route('profile')}}"">Company Profile</a></li>
+								<li><a class="nav-link" aria-current="page" href="{{ route('howto')}}">How To Buy</a></li>
+								<li><a class="nav-link" aria-current="page" href="{{ route('contact')}}">Contact</a></li>
+								<!--
 								<li><a class="dropdown-item" href="{{ route('calculate')}}">Price Calculate</a></li>
-							  </ul>
-							</li>
+-->
+							
+							
 						 
 						 <!--<li class="nav-item"><a class="nav-link" aria-current="page" href="#">Vehicle</a>
 							<ul class="submenu">
 								<li class="nav-item"><a class="nav-link" aria-current="page" href="{{ route('stock')}}">Stock</a></li>
 								<li class="nav-item"><a class="nav-link" href="{{ route('search')}}">Search</a></li>
+								
 								<li class="nav-item"><a class="nav-link" href="{{ route('calculate')}}">Price Calculate</a></li>
 							</ul>
-						 </li>-->					 
+						 </li>					 
 						<li class="nav-item dropdown">
 							  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 								About Us
@@ -38,8 +43,10 @@
 								<li><a class="dropdown-item" href="{{ route('howto')}}">How To Buy</a></li>
 							  	<li><a class="dropdown-item" href="{{ route('contact')}}">Contact</a></li>
 							  </ul>
-						</li>
+						</li>-->
+						<!--
 						<li class="nav-item"><a class="nav-link" aria-current="page" href="{{ route('review')}}">Customer Review</a></li>
+-->
 					 </ul>	
 				 </div>	
 			 </nav>	
