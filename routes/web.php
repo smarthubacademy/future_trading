@@ -31,10 +31,10 @@ Route::get('/profile', [VehicleController::class, 'profile'])->name('profile');
 Route::get('/howto_buy', [VehicleController::class, 'howto'])->name('howto');
 Route::get('/contact', [VehicleController::class, 'contact'])->name('contact');
 Route::get('/review', [VehicleController::class, 'review'])->name('review');
+Route::get('/details', [VehicleController::class, 'details'])->name('details');
 
 
 //admin section
-
 Route::get('/admin', function () {
     return view('welcome');
 })->name('admin');
@@ -43,11 +43,11 @@ Route::post('/login-admin', [AdminAuthController::class, 'loginAdmin'])->name('l
 
 Route::get('/register', [AdminAuthController::class, 'register'])->name('register');
 Route::post('/register-admin', [AdminAuthController::class, 'registerUser'])->name('register-admin');
-Route::get('/dashboard-admin', [AdminAuthController::class, 'dashboard'])->middleware('isLoggedIn');
+#Route::get('/dashboard-admin', [AdminAuthController::class, 'dashboard'])->middleware('isLoggedIn');
+
 Route::get('/logout', [AdminAuthController::class, 'logout'])->name('logout');
-
-Route::get('/admin_stock', [VehicleDataTransferController::class, 'admin_stock'])->middleware('isLoggedIn');
-
+Route::get('/admin-stock', [VehicleDataTransferController::class, 'admin_stock'])->middleware('isLoggedIn');
+Route::get('/admin-data-tranfer', [AdminAuthController::class, 'admin_home'])->middleware('isLoggedIn');
 
 
 // Route::controller(VehicleController::class)->group(function () {
@@ -67,10 +67,7 @@ Route::get('/admin_stock', [VehicleDataTransferController::class, 'admin_stock']
 // });
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');})->middleware(['auth'])->name('dashboard');
-
-
+Route::get('/dashboard', function () { return view('dashboard');})->middleware(['auth'])->name('dashboard');
 
 
 

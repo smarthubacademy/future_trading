@@ -1,4 +1,5 @@
 @extends('vehicle.master')
+
 @section('content')
 <div class="container-fluid">
    <img src="/images/banners/main_banner_1.jpeg" class="img-fluid mx-auto d-block" alt="">
@@ -9,7 +10,7 @@
       @foreach($newArrivalList->chunk(4) as $chunk)
       <div class="row gy-3 my-3 text-center">
          @foreach($chunk as $newArrival)
-            <div class="col-md-3">
+            <div class="col-md-3"><a href="#">
                <div class="card item-card">
                   <img src="upload/images/{{$newArrival->ChassisNo}}_1.jpg" class="card-img-top img-fluid" alt="...">
                   <div class="card-body">
@@ -18,7 +19,7 @@
                      <hr class="mb-4">
                      <p class="card-text">From JPY<b>{{$newArrival->TargetPrice}}</b></p>
                   </div>
-               </div>
+               </div></a>
             </div>
          @endforeach
            
@@ -32,7 +33,7 @@
       @foreach($mostAffordableList->chunk(4) as $chunk)
       <div class="row gy-3 my-3 text-center">
          @foreach($chunk as $mostAffordable)
-            <div class="col-md-3">
+            <div class="col-md-3"><a href="#">
                <div class="card item-card">
                   <img src="upload/images/{{$newArrival->ChassisNo}}_1.jpg" class="card-img-top img-fluid" alt="...">
                   <div class="card-body">
@@ -41,7 +42,7 @@
                      <hr class="mb-4">
                      <p class="card-text">From JPY<b>{{$mostAffordable->TargetPrice}}</b></p>
                   </div>
-               </div>
+               </div></a>
             </div>
          @endforeach
            

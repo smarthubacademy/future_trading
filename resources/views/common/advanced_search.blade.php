@@ -13,7 +13,7 @@
       </div>
    </div>
 
-   <div class="container">
+   <div class="adv_search">
       <form id="quick_seaach" action="/{{$action}}" method="post">
          <input type="hidden" name="_token" value="{{ csrf_token() }}" />
          <div class="row justify-content-between">
