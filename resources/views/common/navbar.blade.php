@@ -3,7 +3,7 @@
 		 <div class="col-md-12 padding_lr">
 			 <nav class="navbar navbar-expand-lg navbar-light">
 			 <a class="navbar-brand" href="{{ route('home')}}">
-			 <img src="/images/smg_logo3.png" alt="SMG MOTORS">
+			 <img src="/images/logo.png" alt="SMG MOTORS">
 			 </a>				   
 			 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"					  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">					  <span class="navbar-toggler-icon"></span>				   </button>
 				 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">

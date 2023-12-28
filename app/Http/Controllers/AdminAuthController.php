@@ -75,4 +75,9 @@ class AdminAuthController extends Controller
         Log::debug("dashboard");
         return view('admin.dashboard');
     }
+    public function admin_home()
+    {
+        Log::debug("admin_home");
+        return view('admin.admin_home');
+    }
 }

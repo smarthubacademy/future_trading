@@ -30,6 +30,18 @@ class VehicleDataTransfer extends Model
         return $vehicles;
 
     }
+    public function chassis_list()
+    {
+        $this->connectAutoDb();
+        $vehicles = DB::table('a2_vehicle')->get();
+        // ->where('NkWebsiteDisplay', 0)
+        // ->whereNotNull('ChassisNo')
+        // ->orderBy('Id')
+        // ->get();
+        $this->connectFutureDb();
+        return $vehicles;
+
+    }
     public function transferData($ids)
     {        
        $this->connectAutoDb();

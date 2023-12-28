@@ -152,6 +152,9 @@ class VehicleController extends Controller
     public function contact(Request $request){
         return view ('company.contact');
     }
+    public function details(Request $request){
+        return view ('vehicle.details');
+    }
     public function about(Request $request){
         return view ('company.about');
     }
