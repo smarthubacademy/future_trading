@@ -18,20 +18,16 @@ class AdminAuthController extends Controller
 
     public function loginAdmin(Request $request)
     {
-        Log::debug("loginAdmin");
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:5|max:12'
         ]);
         $user = User::where('email', $request->email)->first();
         if($user) {
-            Log::debug("loginAdmin2");
             if(Hash::check($request->password, $user->password)) {
-                Log::debug("loginAdmin3");
                 Session::put('loginId', $user->id);
-                return redirect('/dashboard-admin');
+                return redirect('/admin-stock');
             } else {
-                Log::debug("loginAdmin4");
                 return back()->with('fail', 'Password is wrong!!!'); 
             }
             
@@ -72,12 +68,10 @@ class AdminAuthController extends Controller
 
     public function dashboard()
     {
-        Log::debug("dashboard");
         return view('admin.dashboard');
     }
     public function admin_home()
     {
-        Log::debug("admin_home");
-        return view('admin.admin_home');
+        return view('admin.dashborad');
     }
 }

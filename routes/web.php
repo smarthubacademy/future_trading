@@ -38,6 +38,7 @@ Route::get('/details', [VehicleController::class, 'details'])->name('details');
 Route::get('/admin', function () {
     return view('welcome');
 })->name('admin');
+
 Route::get('/login', [AdminAuthController::class, 'login'])->name('login')->middleware('alreadyLoggedIn');
 Route::post('/login-admin', [AdminAuthController::class, 'loginAdmin'])->name('login-admin');
 

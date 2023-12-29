@@ -18,7 +18,7 @@ class AlreadyLoggedIn
     public function handle(Request $request, Closure $next)
     {
         if(Session::has('loginId')) {
-            return redirect('/dashboard-admin')->with('success', 'You already Logged In');
+            return redirect('/admin-stock')->with('success', 'You already Logged In');
         }
         return $next($request);
     }
